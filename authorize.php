@@ -35,7 +35,11 @@ if (empty($_POST)) {
 }
 
 $isAuthorized = ($_POST['authorized'] === 'yes');
-$server->handleAuthorizeRequest($request, $response, $isAuthorized);
+// $server->handleAuthorizeRequest($request, $response, $isAuthorized);
+
+// 将本地用户与访问令牌相关联
+$userId = 1234;
+$server->handleAuthorizeRequest($request, $response, $isAuthorized, $userId);
 if ($isAuthorized) {
     $code = substr($response->getHttpHeader('Location'), strpos($response->getHttpHeader('Location'), 'code=') + 5, 40);
     exit("成功！授权代码:{$code}"); // 授权码将在 30 秒后过期

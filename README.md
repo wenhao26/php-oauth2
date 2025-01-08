@@ -1,7 +1,9 @@
 [OAuth 2.0 Server PHP]
 ===============
 
-> php使用文档 https://bshaffer.github.io/oauth2-server-php-docs/cookbook/
+> 相关文档 <br>
+* https://bshaffer.github.io/oauth2-server-php-docs/cookbook/
+* https://bshaffer.github.io/oauth2-server-php-docs/overview/openid-connect/
 
 
 ## 部署说明
